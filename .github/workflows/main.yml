@@ -19,7 +19,7 @@ jobs:
           key: ${{secrets.KEY}}
           port: ${{secrets.PORT}}
           script: |
-            git clone https://github.com/rahulpal388/cd-cd-next-app.git
+            ls
             cd ci-cd-next-app
             npm run build
             pm2 start npm run start
