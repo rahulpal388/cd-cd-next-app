@@ -19,11 +19,7 @@ jobs:
           key: ${{secrets.KEY}}
           port: ${{secrets.PORT}}
           script: |
-            ls
             cd ci-cd-next-app
-            ls
-            echo $PATH
-            source ~/.bashrc
             npm install
             npm run build
-            pm2 start npm run start
+            pm2 start npm -- start
